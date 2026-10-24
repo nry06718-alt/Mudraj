@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مدرج – منصة المشجعين</title>
+<link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f4ee;--sf:#fff;--tx:#14231a;--mu:#5d6b61;--ln:#d9dfd3;--ac:#0f7a3d;--hl:#e8a50c;--rd:#c4372b;--hd:#0c3b22;--hdt:#f2f4ee;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0b1710;--sf:#13241a;--tx:#e9efe5;--mu:#93a398;--ln:#25392c;--ac:#3fbf72;--hl:#f0b429;--rd:#ef6a5e;--hd:#07110b;--hdt:#e9efe5}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0b1710;--sf:#13241a;--tx:#e9efe5;--mu:#93a398;--ln:#25392c;--ac:#3fbf72;--hl:#f0b429;--rd:#ef6a5e;--hd:#07110b;--hdt:#e9efe5}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 16px/1.6 Tajawal,system-ui,sans-serif;max-width:980px;margin-inline:auto}
+.nw{max-width:560px;margin-inline:auto}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--hl);outline-offset:2px}
+header{background:var(--hd);color:var(--hdt);padding:14px 16px 10px;border-radius:0 0 18px 18px}
+h1{font:400 30px/1 Lalezar,Tajawal,sans-serif;margin:0 0 10px;display:flex;justify-content:space-between;align-items:center}
+h1 small{font:500 12px Tajawal;opacity:.7}
+.lg{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px}
+.lg button{white-space:nowrap;padding:6px 14px;border-radius:99px;border:1px solid rgba(255,255,255,.25);font-size:14px}
+.lg button.on{background:var(--hl);color:#14231a;border-color:var(--hl);font-weight:700}
+.lg button:disabled{opacity:.45;cursor:default}
+main{padding:14px 14px 40px}
+h2{font:400 22px/1.2 Lalezar,Tajawal,sans-serif;margin:22px 0 8px}
+.card{background:var(--sf);border:1px solid var(--ln);border-radius:12px;padding:12px}
+.row{display:flex;align-items:center;gap:10px;width:100%;text-align:start;padding:11px 12px;border-bottom:1px solid var(--ln)}
+.row:last-child{border:0}
+.pos{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:13px;background:var(--ln)}
+.row:first-child .pos{background:var(--hl);color:#14231a}
+.dot{width:10px;height:28px;border-radius:3px;flex:none}
+.tn{font-weight:700}
+.mvp{font-size:12px;color:var(--mu)}
+.mvp b{color:var(--ac)}
+.pts{margin-inline-start:auto;font-weight:700;font-variant-numeric:tabular-nums}
+.top{border:2px solid var(--hl)}
+.clip{aspect-ratio:16/9;border-radius:8px;background:linear-gradient(135deg,#0c3b22,#1b6b3e);display:grid;place-items:center;color:#fff;font-size:34px;margin:8px 0;overflow:hidden;position:relative}
+.clip video{width:100%;height:100%;object-fit:cover}
+.clip span{position:absolute;bottom:6px;inset-inline-start:8px;font-size:12px;background:rgba(0,0,0,.55);padding:0 8px;border-radius:99px}
+.meta{display:flex;gap:8px;align-items:center;font-size:13px;color:var(--mu);flex-wrap:wrap}
+.tag{padding:0 8px;border-radius:99px;font-size:12px;border:1px solid var(--ln)}
+.tag.g{color:var(--ac);border-color:var(--ac)}.tag.r{color:var(--rd);border-color:var(--rd)}.tag.w{color:var(--hl);border-color:var(--hl)}
+.act{display:flex;gap:6px;margin-top:8px}
+.act button{padding:5px 12px;border:1px solid var(--ln);border-radius:99px;font-size:14px}
+.act button.liked{background:var(--ac);color:#fff;border-color:var(--ac)}
+.tabs{display:flex;gap:6px;margin:6px 0 10px}
+.tabs button{padding:4px 14px;border-radius:99px;border:1px solid var(--ln);font-size:14px}
+.tabs button.on{background:var(--tx);color:var(--bg)}
+textarea,select,input[type=file]{width:100%;font:inherit;color:var(--tx);background:var(--bg);border:1px solid var(--ln);border-radius:8px;padding:8px;margin-bottom:8px}
+.go{background:var(--ac);color:#fff;padding:9px 18px;border-radius:8px;font-weight:700}
+.back{color:var(--ac);font-weight:700;padding:4px 0}
+.pl{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--ln)}
+.pl:last-child{border:0}
+.bar{height:6px;background:var(--ln);border-radius:9px;flex:1;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--ac)}
+.vb{padding:4px 12px;border:1px solid var(--ac);color:var(--ac);border-radius:99px;font-size:14px}
+.vb:disabled{opacity:.4}
+.note{font-size:13px;color:var(--mu)}
+header,main{max-width:980px}
+#recm{position:fixed;inset:0;background:#000;z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:#fff;padding:16px}
+#recm[hidden]{display:none}
+#rv{width:100%;max-width:560px;max-height:68vh;object-fit:cover;border-radius:12px;transform:scaleX(-1);background:#111}
+#rt{font:400 40px/1 Lalezar,Tajawal,sans-serif}
+#rt::before{content:'';display:inline-block;width:12px;height:12px;border-radius:50%;background:#e5372b;margin-inline-end:10px}
+.rb{display:flex;gap:10px}
+.cols{display:grid;grid-template-columns:repeat(4,minmax(172px,1fr));gap:10px;align-items:start;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:8px}.col{scroll-snap-align:start}
+.col{background:var(--sf);border:1px solid var(--ln);border-radius:12px;overflow:hidden;padding-bottom:6px}
+.ch{width:100%;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 2px;border-top:5px solid;border-bottom:1px solid var(--ln);text-align:center}
+.ch .tn{font-size:19px;line-height:1.2;font-family:Lalezar,Tajawal,sans-serif;font-weight:400}.ch .pts{margin:0;font-size:13px;color:var(--mu);font-weight:500}.ch .mvp{font-size:12px}
+.mp{padding:8px;border-bottom:1px solid var(--ln)}
+.mp.top{background:color-mix(in srgb,var(--hl) 14%,transparent)}
+.mp .tag{display:inline-block;font-size:10px;padding:0 6px}
+.mt{font-size:13px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.clip.sm{font-size:26px;margin:6px 0}
+.mp .act{margin-top:4px}.mp .act button{padding:3px 12px;font-size:14px}
+.more{display:block;width:100%;font-size:12px;color:var(--ac);font-weight:700;padding:6px}
+#toast{position:fixed;inset-inline:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));max-width:528px;margin-inline:auto;background:var(--tx);color:var(--bg);padding:10px 14px;border-radius:10px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s}
+#toast.on{opacity:1}
+</style>
+</head>
+<body>
+<header>
+<h1>مدرج <small id="src"></small></h1>
+<div class="lg" id="lg"></div>
+</header>
+<main id="app"></main>
+<div id="toast" role="status"></div>
+<div id="recm" hidden><video id="rv" muted playsinline autoplay></video><div id="rt">30</div><div class="rb"><button class="go" onclick="stopRec()">إيقاف وحفظ</button><button class="vb" style="color:#fff;border-color:#fff" onclick="cancelRec()">إلغاء</button></div></div>
+<script>
+const BAD=['كلب','حمار','قذر','ابن الـ'];
+const LEAGUES=['الدوري السعودي','الدوري المصري','الدوري الإماراتي','الدوري القطري','الدوري المغربي'];
+const teams={
+ hilal:{n:'الهلال',c:'#1e5bd8',p:61,pl:{'سالم':41,'ميتروفيتش':37,'نيفيز':30,'بونو':22}},
+ nasr:{n:'النصر',c:'#e8b400',p:58,pl:{'رونالدو':52,'ماني':26,'تاليسكا':24,'عوض':9}},
+ ittihad:{n:'الاتحاد',c:'#111',p:52,pl:{'بنزيما':44,'كانتي':31,'فابينيو':15,'ديابي':12}},
+ ahli:{n:'الأهلي',c:'#0f7a3d',p:49,pl:{'ميندي':28,'توني':27,'فيرمينو':23,'العسيري':8}}
+};
+let myVotes={},liked=new Set(),view='home',sort='top',tab='all',cur=null;
+let posts=[
+ {id:1,team:'nasr',type:'tease',clip:1,text:'مقطع طقطقة: «الدفاع يشوف الكورة وكأنها زائر غريب» 😂',likes:412,rev:1,t:'قبل ٣ ساعات'},
+ {id:2,team:'hilal',type:'thanks',clip:1,text:'شكراً للزعيم على الريمونتادا، ما ننسى هالليلة 💙',likes:388,rev:1,t:'قبل ساعتين'},
+ {id:3,team:'ittihad',type:'crit',clip:0,text:'نبغى تغيير في الوسط، كل مباراة نفس المشكلة.',likes:120,rev:1,t:'قبل ساعة'},
+ {id:4,team:'ahli',type:'tease',clip:0,text:'يا جماعة الجدول يقول إننا رابعين، والفرح يقول إننا أول 😅',likes:95,rev:1,t:'قبل ٤٥ دقيقة'},
+ {id:5,team:'hilal',type:'tease',clip:1,text:'لو الطقطقة بطولة كان أخذناها من زمان',likes:60,rev:1,t:'قبل ٢٠ دقيقة'},
+ {id:6,team:'hilal',type:'crit',clip:0,text:'الحراسة ممتازة بس الهجوم يبغى سرعة أكثر.',likes:44,rev:1,t:'قبل ١٠ دقائق'},
+ {id:7,team:'nasr',type:'thanks',clip:1,text:'هدف الكابتن يستاهل يتحط في المتحف 🐐',likes:301,rev:1,t:'قبل ساعة'},
+ {id:8,team:'nasr',type:'crit',clip:0,text:'نبغى بديل جاهز للدفاع قبل نهاية الفترة.',likes:77,rev:1,t:'قبل ٣٠ دقيقة'},
+ {id:9,team:'ittihad',type:'thanks',clip:1,text:'ماشاء الله على الجمهور، المدرج ما هدأ 90 دقيقة 💛',likes:210,rev:1,t:'قبل ساعتين'},
+ {id:10,team:'ittihad',type:'tease',clip:1,text:'اللي يقول فريقنا هادي ما شاف المدرج',likes:88,rev:1,t:'قبل ٥٠ دقيقة'},
+ {id:11,team:'ahli',type:'thanks',clip:1,text:'شكراً لأهل الدار على الوقفة، الصعود يبدأ من هنا 💚',likes:150,rev:1,t:'قبل ساعة'},
+ {id:12,team:'ahli',type:'tease',clip:1,text:'اللي يطقطق علينا اليوم يبغى يعتذر بكرة',likes:70,rev:1,t:'قبل ٢٥ دقيقة'}
+];
+let leaders={},leaderLeft=3*3600;
+const TY={tease:['طقطقة','w'],thanks:['شكر','g'],crit:['انتقاد','r']};
+const $=s=>document.querySelector(s);
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(toast.x);toast.x=setTimeout(()=>t.classList.remove('on'),2400)}
+function best(k){return Object.entries(teams[k].pl).sort((a,b)=>b[1]-a[1])[0][0]}
+function fmt(s){const h=Math.floor(s/3600),m=Math.floor(s%3600/60);return h+' س '+String(m).padStart(2,'0')+' د'}
+const LG=[['sa','الدوري السعودي'],
+['eg','الدوري المصري','الأهلي،الزمالك،بيراميدز،المصري'],
+['ae','الدوري الإماراتي','العين،شباب الأهلي،الوحدة،الشارقة'],
+['qa','الدوري القطري','السد،الدحيل،الغرافة،الريان'],
+['ma','الدوري المغربي','الوداد،الرجاء،الجيش الملكي،نهضة بركان'],
+['kw','الدوري الكويتي','القادسية،الكويت،العربي،كاظمة'],
+['bh','الدوري البحريني','الرفاع،المحرق،الخالدية،الحد'],
+['om','الدوري العماني','السيب،النهضة،ظفار،عمان'],
+['jo','الدوري الأردني','الفيصلي،الوحدات،الحسين إربد،السلط'],
+['iq','الدوري العراقي','الشرطة،الزوراء،القوة الجوية،الطلبة'],
+['dz','الدوري الجزائري','شباب بلوزداد،مولودية الجزائر،اتحاد الجزائر،شبيبة القبائل'],
+['tn','الدوري التونسي','الترجي،النجم الساحلي،الإفريقي،الصفاقسي'],
+['ly','الدوري الليبي','الأهلي طرابلس،الاتحاد،الأهلي بنغازي،الصداقة'],
+['sd','الدوري السوداني','الهلال،المريخ،الأهلي شندي،الأمل عطبرة'],
+['lb','الدوري اللبناني','النجمة،الأنصار،العهد،الصفاء'],
+['sy','الدوري السوري','تشرين،الجيش،الوثبة،الكرامة'],
+['ps','الدوري الفلسطيني','شباب الخليل،أهلي الخليل،هلال القدس،مركز بلاطة'],
+['ye','الدوري اليمني','الأهلي صنعاء،الوحدة صنعاء،شمسان،التلال']];
+let lg='sa';
+const PN='يوسف،عمر،خالد،كريم،سامي،ناصر،طارق،وليد،ماهر،زياد،هاني،فهد،رامي،أنس،باسل،مراد'.split('،');
+['hilal','nasr','ittihad','ahli'].forEach(k=>teams[k].lg='sa');
+let gid=100;const order={},live={};
+function seedTeam(k,n,id,li,j,pts){teams[k]={n,c:`hsl(${(li*47+j*83)%360},62%,46%)`,p:pts,lg:id,pl:{}};
+for(let q=0;q<4;q++)teams[k].pl[PN[(li*5+j*4+q)%16]]=40-q*7+((li+j+q)%5);
+[['thanks',1,`شكراً لجمهور ${n}، وقفتكم ما تتنسى 💚`],['tease',1,`${n} اليوم مرتاح والطقطقة تنتظر الجولة الجاية 😅`],['crit',0,`نبغى تغيير في ${n}، نفس المشكلة كل مباراة.`]].forEach(([ty,cl,tx],q)=>posts.push({id:gid++,team:k,type:ty,clip:cl,text:tx,likes:300-q*90-j*20+li,rev:1,t:['قبل ساعة','قبل ساعتين','قبل ٣٠ دقيقة'][q]}))}
+LG.forEach(([id,,ts],li)=>{if(ts)ts.split('،').forEach((n,j)=>seedTeam(id+j,n,id,li,j,60-j*4-(li%3)))});
+// بيانات حية من السيرفر: الفريق يتعرّف برقمه الحقيقي، فمقاطعه وتصويته يتبعونه لو تغير مركزه
+async function loadLive(id){try{const r=await fetch('/api/standings/'+id);if(!r.ok)return;const d=await r.json();const li=LG.findIndex(x=>x[0]===id);
+order[id]=d.top4.map((t,j)=>{const k=id+':'+t.teamId;if(!teams[k]){seedTeam(k,t.name,id,li,j,t.points);leaders[k]=pickT(k)}else{teams[k].n=t.name;teams[k].p=t.points}return k});
+live[id]=d.updatedAt;render()}catch(e){}}
+let recBlob=null,recURL=null,recDur=0,mr=null,stream=null,rtm=null,t0=0,cancelled=false;
+async function startRec(){
+ if(!navigator.mediaDevices||!window.MediaRecorder){$('#fl2').click();return}
+ try{stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:'user'},audio:true})}catch(e){toast('تعذر فتح الكاميرا من هنا، افتحنا لك تصوير الجوال');$('#fl2').click();return}
+ const ch=[];mr=new MediaRecorder(stream);mr.ondataavailable=e=>{if(e.data.size)ch.push(e.data)};
+ mr.onstop=()=>{stream.getTracks().forEach(t=>t.stop());clearInterval(rtm);$('#recm').hidden=true;if(cancelled)return;recBlob=new Blob(ch,{type:mr.mimeType||'video/webm'});recURL=URL.createObjectURL(recBlob);recDur=Math.max(1,Math.round((Date.now()-t0)/1000));render();toast('تم التصوير، اضغط انشر')};
+ $('#rv').srcObject=stream;$('#recm').hidden=false;cancelled=false;t0=Date.now();mr.start();let left=30;$('#rt').textContent=left;
+ rtm=setInterval(()=>{left--;$('#rt').textContent=left;if(left<=0)stopRec()},1000)}
+function stopRec(){if(mr&&mr.state==='recording')mr.stop()}
+function cancelRec(){cancelled=true;stopRec()}
+function pickT(k){const c=posts.filter(p=>p.team===k&&p.rev&&!p.done&&!p.hide).sort((a,b)=>b.likes-a.likes)[0];return c?c.id:null}
+function rotT(k){const o=posts.find(p=>p.id===leaders[k]);if(o)o.done=1;leaders[k]=pickT(k);if(!leaders[k]){posts.forEach(p=>{if(p.team===k)p.done=0});leaders[k]=pickT(k)}}
+function rotate(){Object.keys(teams).forEach(rotT);leaderLeft=3*3600;render();toast('انتهت ٣ ساعات، تبدل المقطع المتصدر في كل فريق')}
+Object.keys(teams).forEach(k=>leaders[k]=pickT(k));
+function postHTML(p,lead){
+ const [tn,tc]=TY[p.type];
+ return `<div class="card ${lead?'top':''}" style="margin-bottom:10px">
+ <div class="meta"><b style="color:var(--tx)">${teams[p.team].n}</b><span class="tag ${tc}">${tn}</span>${p.rev?'<span class="tag g">تمت المراجعة</span>':'<span class="tag">بانتظار مراجعة المشرف</span>'}<span>${p.t}</span></div>
+ ${p.clip?`<div class="clip">${p.src?`<video src="${p.src}" controls playsinline></video>`:'▶'}<span>${p.dur||30} ث</span></div>`:''}
+ <div>${p.text}</div>
+ <div class="act"><button class="${liked.has(p.id)?'liked':''}" onclick="like(${p.id})" aria-label="إعجاب">👍 ${p.likes}</button><button onclick="report(${p.id})">إبلاغ</button></div></div>`}
+function mini(p,lead,n){return `<div class="mp ${lead?'top':''}"><div class="meta"><b class="pos" style="color:var(--tx)">${n}</b>${lead?'<span class="tag w">متصدر</span>':'<span class="tag">'+p.t+'</span>'}</div>${p.clip?`<div class="clip sm">${p.src?`<video src="${p.src}" playsinline muted></video>`:'▶'}</div>`:''}<div class="mt">${p.text}</div><div class="act"><button class="${liked.has(p.id)?'liked':''}" onclick="like(${p.id})" aria-label="إعجاب">👍 ${p.likes}</button></div></div>`}
+function colHTML(k,i,vis){const T=teams[k],L=vis.filter(p=>p.team===k),lead=L.find(p=>p.id===leaders[k]),rest=L.filter(p=>p.id!==leaders[k]&&p.rev&&!p.done).sort((a,b)=>b.likes-a.likes).slice(0,2),nw=L.filter(p=>!p.rev).slice(0,1);
+return `<div class="col"><button class="ch" style="border-color:${T.c==='#111'?'var(--tx)':T.c}" onclick="go('team','${k}')"><span class="pos">${i+1}</span><span class="tn">${T.n}</span><span class="pts">${T.p} نقطة</span><span class="mvp">⭐ <b>${best(k)}</b></span></button>${lead?mini(lead,1,1):''}${rest.map((p,i)=>mini(p,0,i+2)).join('')}</div>`}
+function like(id){const p=posts.find(x=>x.id===id);if(liked.has(id)){liked.delete(id);p.likes--}else{liked.add(id);p.likes++}render()}
+function report(id){const p=posts.find(x=>x.id===id);p.rep=(p.rep||0)+1;if(p.rep>=3){p.hide=1;if(leaders[p.team]===id)rotT(p.team);render();toast('وصل المقطع لحد البلاغات وانخفى للمراجعة')}else toast('وصلنا بلاغك، شكراً')}
+function vote(k,name){if(myVotes[k])return;myVotes[k]=name;teams[k].pl[name]++;toast('تم تصويتك، صوت واحد لكل فريق في الفترة');render()}
+function submit(){
+ const t=$('#txt').value.trim(),ty=$('#ty').value,tm=$('#tm').value,f=$('#fl').files[0]||$('#fl2').files[0];
+ if(!t&&!f&&!recBlob){toast('اكتب تعليقاً أو أرفق مقطعاً');return}
+ if(BAD.some(w=>t.includes(w))){toast('رفضنا التعليق: فيه ألفاظ مسيئة. الطقطقة مسموحة، السب لا');return}
+ const add=(dur,src)=>{posts.unshift({id:Date.now(),team:tm,type:ty,clip:!!src,text:t||'مقطع جديد',likes:0,rev:0,t:'الآن',dur,src});recBlob=null;recURL=null;toast('وصل للمراجعة، يظهر للجميع بعد الفحص');render()};
+ if(recBlob)add(recDur,recURL);else if(f){const v=document.createElement('video');v.preload='metadata';v.onloadedmetadata=()=>{const d=Math.round(v.duration);if(d>30){toast('المقطع '+d+' ثانية، الحد الأقصى ٣٠ ثانية')}else add(d,URL.createObjectURL(f))};v.src=URL.createObjectURL(f)}else add(0)}
+function go(v,k){view=v;cur=k;render();scrollTo(0,0)}
+function render(){
+ {const e=$('#lg'),sc=e.scrollLeft;e.innerHTML=LG.map(([id,n])=>`<button class="${id===lg?'on':''}" onclick="lg='${id}';go('home');loadLive('${id}')">${n}</button>`).join('');e.scrollLeft=sc}$('#src').textContent=live[lg]?'بيانات حية':'نموذج أولي – بيانات تجريبية';
+ const vis=posts.filter(p=>!p.hide);
+ if(view==='team'){const k=cur,T=teams[k],tot=Object.values(T.pl).reduce((a,b)=>a+b,0),mine=myVotes[k];
+  const list=vis.filter(p=>p.team===k&&(tab==='all'||p.type===tab)).sort((a,b)=>b.likes-a.likes);
+  $('#app').innerHTML=`<div class="nw"><button class="back" onclick="go('home')">← الترتيب</button>
+  <h2 style="margin-top:6px"><span style="color:${T.c==='#111'?'var(--tx)':T.c}">●</span> ${T.n}</h2>
+  <div class="card"><b>صوّت لأفضل لاعب هذي الفترة</b>
+  ${Object.entries(T.pl).sort((a,b)=>b[1]-a[1]).map(([n,v])=>`<div class="pl"><span style="width:84px">${n}</span><div class="bar"><i style="width:${v/tot*100}%"></i></div><span class="note" style="width:30px">${v}</span><button class="vb" ${mine?'disabled':''} onclick="vote('${k}','${n}')">${mine===n?'صوتّك':'صوّت'}</button></div>`).join('')}</div>
+  <p class="note">صوت واحد لكل مشجع في الفترة. الأعلى أصواتاً يظهر اسمه في الترتيب كأفضل لاعب.</p></div>`;return}
+ const rank=order[lg]||Object.keys(teams).filter(k=>teams[k].lg===lg).sort((a,b)=>teams[b].p-teams[a].p);
+ $('#app').innerHTML=`<div class="meta" style="margin-bottom:8px">المقطع المتصدر يتبدل بعد ${fmt(leaderLeft)} <button class="tag" onclick="rotate()">جرّب: انتهت المدة</button></div>
+ <div class="cols">${rank.map((k,i)=>colHTML(k,i,vis)).join('')}</div>
+ <p class="note">اضغط على اسم الفريق لدخول صفحته والتصويت لأفضل لاعب.</p>
+ <div class="nw"><h2>انشر طقطقتك</h2>
+ <div class="card"><textarea id="txt" rows="3" placeholder="اكتب تعليقك…"></textarea>
+ <select id="tm">${(order[lg]||Object.keys(teams).filter(k=>teams[k].lg===lg)).map(k=>`<option value="${k}">عن فريق ${teams[k].n}</option>`).join('')}</select>
+ <select id="ty"><option value="tease">طقطقة</option><option value="thanks">شكر لفريقي</option><option value="crit">انتقاد</option></select>
+ ${recURL?`<div class="clip sm" style="aspect-ratio:16/9"><video src="${recURL}" controls playsinline></video></div><button class="vb" style="margin-bottom:8px" onclick="recBlob=null;recURL=null;render()">حذف المقطع</button>`:`<div class="tabs"><button class="go" onclick="startRec()">🎥 صوّر الآن</button><button class="vb" onclick="$('#fl').click()">من الاستوديو</button></div><div id="fn" class="note"></div>`}
+ <input type="file" id="fl" accept="video/*" hidden onchange="$('#fn')&&($('#fn').textContent='تم اختيار: '+this.files[0].name)">
+ <input type="file" id="fl2" accept="video/*" capture="user" hidden onchange="toast('تم التصوير، اضغط انشر')">
+ <div class="note" style="margin-bottom:8px">المقطع حده ٣٠ ثانية. كل شي يمر على فلترة ومراجعة قبل الظهور.</div>
+ <button class="go" onclick="submit()">انشر</button></div>
+ </div>`}
+setInterval(()=>{leaderLeft-=60;if(view==='home'&&leaderLeft<=0)rotate()},60000);
+render();loadLive(lg);setInterval(()=>loadLive(lg),300000);
+</script>
+</body>
+</html>
